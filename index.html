@@ -1,0 +1,123 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Spotify Api Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--CSS-->
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='
+		text/css'>
+		<!--Script-->
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="spotify.js"></script>
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+	</head>
+
+	<body>
+
+		<div data-role="page" id="mainPage">
+
+			<div data-role="header" align="center">
+				<h2> Spotify API Demo</h2>
+				<div data-role="controlgroup" data-type="horizontal" data-theme="b" data-contenttheme="b">
+					<a id="btn_mainPage" href="#mainPage" data-transition="turn" class="ui-btn" rel="external">Main Page</a>
+					<a id="btn_about"  href="#about" data-transition="flip" class="ui-btn" rel="external">About</a>
+					<a id="btn_contact" data-transition="fade" href="mailto:ahmed.mansour@metropolia.fi" class="ui-btn" rel="external">Contact Us</a>
+					<a id="btn_playList" href="#pagePlayList" data-transition="flip" class="ui-btn" rel="external">PlayList</a>
+				</div>
+
+				<div class="playbox">
+
+					<div class="cover">
+						<img src="green-music-icon.png">
+					</div>
+
+					<div class="header">
+						<div id=btn class="btn_stop"></div>
+
+						<div class="metadata">
+							<p id="song_title">Song Title</p>
+							<p id="song_artist">Song Artist</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div role="main" class="ui-content">
+
+
+				<audio id="audio"></audio>
+
+				<form id="searchBox">
+					<input type="text" name="searchTitle" id="searcheName"/>
+					<div data-role="button" data-corners="true">
+						<!--<a  href="#btn_search"  class="ui-btn ui-btn-b">SEARCH</a>-->
+						<button id="btn_search" type="button">Search</button>
+					</div>
+				</form>
+
+				<ul id="results">
+				<!--
+				<li><a id="1AY2BAQptLHcaoiptJZskX"><span class="song">ABC</span><br><span class="artists" style="padding: 0 40px">--Jackson 5</span></a></li><br>
+				-->
+				</ul>
+
+			</div>
+
+			<div data-role="footer"></div>
+
+		</div>
+
+		<div data-role="page" id="pagePlayList">
+
+			<div data-role="header" align="center">
+				<h2> Spotify API Demo</h2>
+				<div data-role="controlgroup" data-type="horizontal" data-theme="b" data-contenttheme="b">
+					<a id="btn_mainPage" href="#mainPage" data-transition="turn" class="ui-btn" rel="external">Main Page</a>
+					<a id="btn_about"  href="#about" data-transition="flip" class="ui-btn" rel="external">About</a>
+					<a id="btn_contact" data-transition="fade" href="mailto:ahmed.mansour@metropolia.fi" class="ui-btn" rel="external">Contact Us</a>
+					<a id="btn_playList" href="#pagePlayList" data-transition="flip" class="ui-btn" rel="external">PlayList</a>
+				</div>
+			</div>
+
+			<div data-role="main" align="center">
+				<p>Coming soon</p>
+			</div>
+
+			<div data-role="footer">
+				<a id="btn_back" href="#" class="ui-btn" data-rel="back">Go Back</a>
+			</div>
+
+		</div>
+
+		<div data-role="page" id="about">
+
+			<div data-role="header" align="center">
+				<h2> Spotify API Demo</h2>
+				<div data-role="controlgroup" data-type="horizontal" data-theme="b" data-contenttheme="b">
+					<a id="btn_mainPage" href="#mainPage" data-transition="turn" class="ui-btn" rel="external">Main Page</a>
+					<a id="btn_about"  href="#about" data-transition="flip" class="ui-btn" rel="external">About</a>
+					<a id="btn_contact" data-transition="fade" href="mailto:ahmed.mansour@metropolia.fi" class="ui-btn" rel="external">Contact Us</a>
+					<a id="btn_playList" href="#pagePlayList" data-transition="flip" class="ui-btn" rel="external">PlayList</a>
+				</div>
+			</div>
+
+			<div data-role="main" align="center">
+				<p>This is a demo for a spotify player usable from any mobile browser. It was made by two very intellgent students in the cold lands of Finland</p>
+			</div>
+
+			<div data-role="footer">
+				<a id="btn_back" href="#" class="ui-btn" data-rel="back">Go Back</a>
+			</div>
+
+		</div>
+
+
+	</body>
+
+</html>
